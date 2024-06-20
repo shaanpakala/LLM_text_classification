@@ -35,7 +35,7 @@ The one that yieled the best results seemed to be this Support Vector Machine mo
 # Results
 <img width="524" alt="Screenshot 2024-06-20 at 3 57 39 PM" src="https://github.com/shaanpakala/LLM_text_classification/assets/68576257/ffdb598d-0da2-48d3-b9c2-9d5607792f1b">
 
-As you can see, this approach seems to work exceptionally well on the testing data (different Wikipedia articles than in the train set).
+As you can see, this approach seems to work very well on the testing data (different Wikipedia articles than in the train set).
 
 # Limitations
 The text data comes exclusively from Wikipedia articles, which may limit the generalization capabilities for this approach.
