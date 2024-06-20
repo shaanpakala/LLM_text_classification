@@ -6,10 +6,11 @@ The data used for this project came exclusively from Wikipedia articles. Using B
 The motivation for these 4 categories were to have some very general topics (so each one would have plenty of training data), but they still need to be different "enough" to classify.
 While collecting the articles, the paragraphs were split up so that each paragraph represented one sample.
 
-# Hidden States Visualization
-After collecting the paragraphs from Wikipedia, I simply passed them through a tokenizer and through Google's pretrained BERT model.
+Some standard text preprocessing was applied, including getting rid of stop words and punctuation.
 
-# Data Preprocessing
+# Hidden States Visualization
+After collecting the paragraphs from Wikipedia, I simply passed them through a tokenizer and through Google's pretrained BERT model and collected their hidden states.
+The 
 
 
 # Hidden State Classification
