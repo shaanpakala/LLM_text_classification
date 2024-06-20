@@ -25,7 +25,6 @@ After this step, we still have 768 features to visualize, so performing t-SNE to
 From here we can see even though only 2 features were generated from the original hidden states, the classes are still seemingly separable in this feature space, which is great news for a machine learning classifier.
 
 # Hidden State Classification
-
 To perform classification of these hidden states into the four classes, I experimented with a few different models: Random Forest, Naive Bayes, Support Vector Machines, and stacking some models together to create a larger ensemble model.
 The one that yieled the best results seemed to be this Support Vector Machine model:
 
@@ -33,7 +32,6 @@ The one that yieled the best results seemed to be this Support Vector Machine mo
 
 
 # Results
-
 <img width="524" alt="Screenshot 2024-06-20 at 3 57 39 PM" src="https://github.com/shaanpakala/LLM_text_classification/assets/68576257/ffdb598d-0da2-48d3-b9c2-9d5607792f1b">
 
 As you can see, this approach seems to work exceptionally well on the testing data (different Wikipedia articles than in the train set).
