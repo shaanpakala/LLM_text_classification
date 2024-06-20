@@ -4,7 +4,7 @@ In this (personal) project, I leverage the capabilities of Google's BERT Large L
 <img width="765" alt="Screenshot 2024-06-20 at 3 46 38 PM" src="https://github.com/shaanpakala/LLM_text_classification/assets/68576257/4c618947-5b8f-487a-8fec-e06622983e86">
 
 # Data Collection
-The data used for this project came exclusively from Wikipedia articles. Using BeautifulSoup on Python, I collected over 400 Wikipedia articles, all falling under the topics 'Science', 'Music', 'Sports', or 'Government & Law'.
+The data used for this project came exclusively from Wikipedia articles. Using BeautifulSoup on Python, I collected over 400 Wikipedia articles, all falling under the topics 'Science', 'Music', 'Sports', or 'Government & Law' (the exact articles can be found in 01_data_collection.ipynb).
 The motivation for these 4 categories were to have some very general topics (so each one would have plenty of training data), but they still need to be different "enough" to classify.
 While collecting the articles, the paragraphs were split up so that each paragraph represented one sample.
 
