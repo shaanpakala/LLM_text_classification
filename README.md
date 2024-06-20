@@ -1,5 +1,6 @@
 # Introduction
-In this (personal) project, I leverage the capabilities of Google's BERT Large Language Model (as shown below), to generate hidden states for text data 
+In this (personal) project, I leverage the capabilities of Google's BERT Large Language Model (as shown below), to generate hidden states for text data.
+
 <img width="765" alt="Screenshot 2024-06-20 at 3 46 38 PM" src="https://github.com/shaanpakala/LLM_text_classification/assets/68576257/4c618947-5b8f-487a-8fec-e06622983e86">
 
 # Data Collection
@@ -18,15 +19,24 @@ The issue with visualizing these hidden states, is that each sample's hidden sta
 As you can tell, this not only helps with compressing the data and making it more intuitive, but it also maps any text input to exactly 768 features, which is very useful for machine learning training.
 
 After this step, we still have 768 features to visualize, so performing t-SNE to map these 768 features to just 2 features gives this scatter plot:
+
 <img width="584" alt="Screenshot 2024-06-20 at 3 46 57 PM" src="https://github.com/shaanpakala/LLM_text_classification/assets/68576257/8a14e68e-ec7f-4794-8391-ecab44483653">
 
 From here we can see even though only 2 features were generated from the original hidden states, the classes are still seemingly separable in this feature space, which is great news for a machine learning classifier.
 
 # Hidden State Classification
 
+To perform classification of these hidden states into the four classes, I experimented with a few different models: Random Forest, Naive Bayes, Support Vector Machines, and stacking some models together to create a larger ensemble model.
+The one that yieled the best results seemed to be this Support Vector Machine model:
+
+<img width="380" alt="Screenshot 2024-06-20 at 3 56 00 PM" src="https://github.com/shaanpakala/LLM_text_classification/assets/68576257/9b688729-4064-4315-b9d8-0f2a28ed00b7">
+
 
 # Results
 
+<img width="524" alt="Screenshot 2024-06-20 at 3 57 39 PM" src="https://github.com/shaanpakala/LLM_text_classification/assets/68576257/ffdb598d-0da2-48d3-b9c2-9d5607792f1b">
+
+As you can see, this approach seems to work exceptionally well on the testing data (different Wikipedia articles than in the train set).
 
 # Limitations
 The text data comes exclusively from Wikipedia articles, which may limit the generalization capabilities for this approach.
